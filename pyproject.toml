@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpumake"
+version = "0.1.0"
+description = "Make-style pipeline runner for shared GPU servers: content-hashed revisions, incremental rebuilds, idle-GPU scheduling, detached remote runs over SSH"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+remote = ["paramiko>=2.7"]
+test = ["pytest>=7"]
+
+[project.scripts]
+gpumake = "gpumake.cli:main"
+gpumake-remote = "gpumake.remote:main"
+
+[tool.setuptools]
+packages = ["gpumake"]

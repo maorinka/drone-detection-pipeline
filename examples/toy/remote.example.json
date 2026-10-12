@@ -1,0 +1,11 @@
+{
+  "host": "gpu-server.example.org",
+  "user": "your-user",
+  "port": 22,
+  "remote_root": "/home/your-user/my-project",
+  "python": "/home/your-user/miniconda3/bin/python",
+  "known_hosts": "known_hosts",
+  "sync": ["pipeline.py", "make_config.json", "scripts/**/*.py", "data/*.csv"],
+  "min_free_disk_fraction": 0.30,
+  "env": {}
+}
